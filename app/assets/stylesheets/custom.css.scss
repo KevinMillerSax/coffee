@@ -1,0 +1,30 @@
+// removing unwanted styling
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0px;
+}
+
+//body styling
+body {
+  margin: 3vh 5vw 2vh 5vw;
+}
+
+//styling the header
+
+.top-banner {
+  border: 1px solid black;
+}
+
+.top-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+//
