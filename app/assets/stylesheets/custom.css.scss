@@ -15,6 +15,23 @@ body {
   margin: 3vh 5vw 2vh 5vw;
 }
 
+//general classes
+
+.row {
+  display: flex;
+  margin: 3vh 0vh;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: column;
+}
+
+.one-fourth {
+  position: absolute;
+  left: 25vw;
+}
+
 //styling the header
 
 .top-banner {
@@ -32,7 +49,19 @@ body {
   }
   .top-nav-right {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 15vw;
   }
 }
 //
+
+//error styles
+
+.error-message {
+  color: red;
+  margin: 3vh, 0vh;
+}
+
+.flash-danger {
+  color:red
+}

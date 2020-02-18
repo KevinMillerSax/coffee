@@ -10,9 +10,13 @@
     <%= render 'layouts/shim' %>
   </head>
   <%= render 'layouts/header' %>
+  <% flash.each do |message_type, message| %>
+  <h2 class="flash-danger"> <%= message %> </h2>
+  <% end %>
 
   <body>
     <%= yield %>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

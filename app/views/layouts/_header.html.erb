@@ -13,8 +13,12 @@
       </ul>
 
       <ul class="top-nav-right">
-        <!-- if not logged in show log out and profile, if logged out, show logged in  -->
-        <li><%= link_to "Log In", signup_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Profile", @current_user %></li>
+        <% else %>
+          <li><%= link_to "Log In", login_path %></li>
+          <li><%= link_to "Sign up", signup_path %></li>
+        <% end %>
       </ul>
     </nav>
 </header>
