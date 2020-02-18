@@ -3,13 +3,18 @@
       <h2><%= link_to "Title", root_path %></h2>
       <small>The subtitle for this site</small>
     </div>
-    <nav>
-      <ul class="top-nav">
+    <nav class="top-nav">
+      <ul class="top-nav-left">
         <li><%= link_to "Home", root_path%></li>
         <li><%= link_to "Forums", "#"%></li>
-        <li><%= link_to "Resources", "#"%></li>
+        <li><%= link_to "Resources", resources_path %></li>
         <li><%= link_to "Search", "#"%></li>
         <li><%= link_to "About", about_path %></li>
+      </ul>
+
+      <ul class="top-nav-right">
+        <!-- if not logged in show log out and profile, if logged out, show logged in  -->
+        <li><%= link_to "Log In", signup_path %></li>
       </ul>
     </nav>
 </header>

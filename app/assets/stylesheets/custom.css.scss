@@ -7,6 +7,7 @@ a{
 
 ul {
   padding: 0px;
+  list-style: none;
 }
 
 //body styling
@@ -21,10 +22,17 @@ body {
 }
 
 .top-nav {
-  list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 50vw;
-}
 
+  .top-nav-left {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+  }
+  .top-nav-right {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 //
