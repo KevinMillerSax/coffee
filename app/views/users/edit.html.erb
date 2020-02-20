@@ -1,0 +1,54 @@
+<% provide(:title, "Edit Profile")%>
+<h1>Edit your profile</h1>
+
+<div class="signup-form">
+ <%= render 'shared/errors' %>
+  <%= form_for(@user) do |f|%>
+    <div class="row">
+      <div class="horizontal">
+        <%= f.label :username, "Username: " %>
+        <small> Length between 2 and 20 characters </small>
+      </div>
+      <%= f.text_field :username, class: "one-fourth" %>
+    </div>
+
+    <div class="row">
+      <%= f.label :email, "Email Address: " %>
+      <%= f.email_field :email, class: "one-fourth" %>
+    </div>
+
+    <div class="row">
+      <div class="horizontal">
+        <%= f.label :password, "Password: " %>
+        <small> Minimum of 6 characters </small>
+      </div>
+      <%= f.password_field :password, class: "one-fourth" %>
+    </div>
+
+    <div class="row">
+      <%= f.label :password_confirmation, "Confirm Password: " %>
+      <%= f.password_field :password_confirmation, class: "one-fourth" %>
+    </div>
+
+    <div class="row">
+      <div class="horizontal">
+        <%= f.label :equipment, "Equipment: " %>
+        <small>Tell us about your coffee stuff!</small>
+      </div>
+      <%= f.text_area :equipment, class: "one-fourth" %>
+    </div>
+
+    <div class="row">
+      <%= f.label :favorite_coffee, "Your Favorite Coffee: " %>
+      <%= f.text_area :favorite_coffee, class: "one-fourth" %>
+    </div>
+
+     <div class="row">
+      <%= f.label :location, "Where you're from: " %>
+      <%= f.text_field :location, class: "one-fourth" %>
+    </div>
+
+    <%= f.submit "Update"%>
+  <% end %>
+</div>
+

@@ -1,7 +1,9 @@
 <%= provide(:title, "My Profile")%>
 
-<%= @user.username %>
-<%= @user.location%>
-<%= @user.favorite_coffee%>
-<%= @user.equipment%>
+<h2><%= @user.username %></h2>
+<h3><%= @user.location%></h3>
+<h4>About</h4>
+<p>Favorite Coffee: <%= @user.favorite_coffee%></p>
+<p>Your stuff: <%= @user.equipment%></p>
+<p><%= link_to "Edit your profile", edit_user_path %></p>
 <button> <%= link_to "Log Out", logout_path, method: "delete" %> </button>
