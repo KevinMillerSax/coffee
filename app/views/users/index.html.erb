@@ -1,0 +1,7 @@
+<% provide(:title, "Everyone") %>
+
+<h1>The index page!!!!</h1>
+
+<% @users.each do |u| %>
+  <h3><%= link_to u.username, u %></h3>
+<% end %>
