@@ -4,4 +4,8 @@
 
 <% @users.each do |u| %>
   <h3><%= link_to u.username, u %></h3>
+  <% if current_user.admin? && !current_user?(u) %>
+    <%= link_to "delete", u, method: 'delete',
+                             data: {confirm: "Are you sure you want to delete this User?"} %>
+  <% end %>
 <% end %>
