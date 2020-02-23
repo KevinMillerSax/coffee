@@ -18,6 +18,10 @@ class ConversationsController < ApplicationController
     end
   end
 
+  def show
+    @conversation = Conversation.find(params[:id])
+  end
+
   private
 
   def conversation_params

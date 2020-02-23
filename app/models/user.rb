@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :conversations
+  has_many :replies
+
   attr_accessor :remember_token
 
   validates :username, presence: true, uniqueness: true, length: { maximum: 20, minimum: 2 }

@@ -5,5 +5,5 @@
 </hr>
 
 <% @conversations.each do |c| %>
- <h4> <%= c.content %> </h4>
+ <h4><%= link_to c.content, c%> </h4>
 <% end %>
