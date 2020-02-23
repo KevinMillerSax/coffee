@@ -1,0 +1,9 @@
+<% provide(:title, "The Forum") %>
+
+<h1>Welcome to the forum! </h1>
+<%= link_to "Post a new Thread", newthread_path %>
+</hr>
+
+<% @conversations.each do |c| %>
+ <h4> <%= c.content %> </h4>
+<% end %>

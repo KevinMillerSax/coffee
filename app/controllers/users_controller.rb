@@ -53,12 +53,7 @@ class UsersController < ApplicationController
 
   #before filters
 
-  #confirm a logged in user
-  def logged_in_user
-    unless logged_in?
-      redirect_to root_url
-    end
-  end
+
 
   def correct_user
     @user = User.find(params[:id])
