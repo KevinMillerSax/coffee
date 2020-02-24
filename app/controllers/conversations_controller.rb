@@ -20,6 +20,8 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = Conversation.find(params[:id])
+    @replies = @conversation.replies.paginate(page: params[:page])
+    @reply = Reply.new
   end
 
   private

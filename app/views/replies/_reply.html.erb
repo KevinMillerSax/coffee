@@ -1,0 +1,5 @@
+<li id="reply-<%= reply.id %>">
+  <%= link_to reply.user.username, reply.user %>
+  <%= reply.content %>
+  Posted <%= time_ago_in_words(reply.created_at) %> ago
+</li>

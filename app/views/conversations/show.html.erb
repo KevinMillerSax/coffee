@@ -1,3 +1,19 @@
-<% provide(:title, "The Forum") %>
+<% provide(:title, @conversation.content) %>
 
 <h1><%= @conversation.content %></h1>
+
+<%= form_for(@reply) do |f| %>
+  <%= f.label :content, "Reply"%>
+  <%= f.text_field :content %>
+  <%= f.hidden_field :conversation_id, value: params[:id] %>
+  <%= f.submit "Reply" %>
+<% end %>
+
+<% if @conversation.replies.any? %>
+  <h3>Replies: <%= @conversation.replies.count %></h3>
+  <ol>
+    <%= render @replies %>
+  </ol>
+  <% will_paginate @replies %>
+<% end %>
+

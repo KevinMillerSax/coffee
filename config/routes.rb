@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   delete 'logout'     => 'sessions#destroy'
   resources :conversations
   get 'newthread'     => 'conversations#new'
+  resources :replies, only: [:create, :destroy]
 end
