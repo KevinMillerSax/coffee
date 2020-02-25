@@ -1,4 +1,5 @@
-// removing unwanted styling
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 a{
   text-decoration: none;
@@ -10,50 +11,50 @@ ul {
   list-style: none;
 }
 
+h1 {
+  margin: 0px;
+}
+
+//general styling
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  float: right;
+}
+
 //body styling
 body {
   margin: 3vh 5vw 2vh 5vw;
 }
 
-//general classes
 
-.row {
-  display: flex;
-  margin: 3vh 0vh;
-}
-
-.horizontal {
-  display: flex;
-  flex-direction: column;
-}
-
-.one-fourth {
-  position: absolute;
-  left: 25vw;
-}
 
 //styling the header
+header {
+  margin-bottom: 10vh;
+}
 
 .top-banner {
   border: 1px solid black;
+  background-color: #800000;
+  text-align: center;
+  .page-title {
+    color: white;
+    text-shadow: 3px 3px 8px black;
+  }
+  .page-title:hover {
+    color:white;
+  }
+
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
 
-  .top-nav-left {
-    display: flex;
-    justify-content: space-between;
-    width: 40vw;
-  }
-  .top-nav-right {
-    display: flex;
-    justify-content: space-around;
-    width: 15vw;
-  }
-}
-//
+
+
 
 //error styles
 
@@ -65,3 +66,5 @@ body {
 .flash-danger {
   color:red
 }
+
+//added after bootstrap

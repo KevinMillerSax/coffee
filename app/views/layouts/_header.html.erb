@@ -1,10 +1,10 @@
 <header>
     <div class="top-banner">
-      <h2><%= link_to "Title", root_path %></h2>
-      <small>The subtitle for this site</small>
+      <h2><%= link_to "The Nervosa", root_path, class: "page-title" %></h2>
+      <small class="page-title">A Place to Talk About Coffee</small>
     </div>
-    <nav class="top-nav">
-      <ul class="top-nav-left">
+    <nav>
+      <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path%></li>
         <li><%= link_to "Forum", conversations_path%></li>
         <li><%= link_to "Resources", resources_path %></li>
@@ -12,7 +12,7 @@
         <li><%= link_to "About", about_path %></li>
       </ul>
 
-      <ul class="top-nav-right">
+      <ul class="nav navbar-nav right">
         <% if logged_in? %>
           <li><%= link_to "Profile", @current_user %></li>
           <li><%= link_to "Our Members", users_path %></li>

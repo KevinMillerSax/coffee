@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-body flex-center">
+    <div class="col-md-7">
+      <h4><%= link_to conversation.content, conversation%> </h4>
+      <p>Started by <%= link_to conversation.user.username, conversation.user %>,
+      <%= conversation.created_at.strftime('%F %T') %> </p>
+    </div>
+    <div class="col-md-2">
+      <p>Replies: <%= conversation.replies.count %></p>
+    </div>
+    <div class="col-md-3">
+      <p>Last post: <%= time_ago_in_words(conversation.replies.first.created_at) %>
+      ago by <%= link_to conversation.replies.first.user.username, conversation.replies.first.user %> </p>
+    </div>
+  </div>
+</div>
