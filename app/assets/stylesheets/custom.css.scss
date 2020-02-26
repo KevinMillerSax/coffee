@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.jumbotron p {
+  margin-bottom: 0px;
+}
+
 a{
   text-decoration: none;
   color: black;
@@ -15,7 +19,24 @@ h1 {
   margin: 0px;
 }
 
+h3 {
+  margin-top: 0px;
+}
+
 //general styling
+
+.half-wide {
+  width: 50vw;
+}
+
+.bottom-space {
+  margin-bottom: 5vh;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
 
 .flex-center {
   display: flex;
@@ -49,7 +70,12 @@ header {
   .page-title:hover {
     color:white;
   }
+}
 
+//login style
+.login-row {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
