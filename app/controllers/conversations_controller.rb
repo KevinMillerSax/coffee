@@ -12,6 +12,7 @@ class ConversationsController < ApplicationController
   def create
     @conversation = current_user.conversations.new(conversation_params)
     if @conversation.save
+      @conversation.create_activity :create, owner: current_user
       redirect_to conversations_url
     else
       render 'new'

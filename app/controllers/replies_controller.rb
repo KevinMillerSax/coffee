@@ -6,6 +6,7 @@ class RepliesController < ApplicationController
     @reply = @current_conversation.replies.new(reply_params)
     @reply.user = current_user
     if @reply.save
+      @reply.create_activity :create, owner: current_user
       redirect_to @current_conversation
     else
       redirect_to root_url

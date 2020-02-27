@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  include PublicActivity::Common
   has_many :conversations
   has_many :replies
 

@@ -1,5 +1,15 @@
 <% provide(:title, "Welcome!") %>
 
-<h3>Latest Activity</h3>
+<div>
+  <h3>Latest Activity</h3>
+  <% @activities.each do |activity| %>
+    <div class="panel panel-default half-wide">
+      <div class="panel-body">
+        <b><%= link_to activity.owner.username, activity.owner if activity.owner %></b>
+        <%= render_activity activity %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 

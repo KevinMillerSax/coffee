@@ -15,3 +15,8 @@
   <p><%= link_to "Edit your profile", edit_user_path %></p>
   <button> <%= link_to "Log Out", logout_path, method: "delete" %> </button>
 <% end %>
+
+<h4>Activity: </h4>
+<% @activities.each do |activity| %>
+  <div><%= render_activity activity %></div>
+<% end %>

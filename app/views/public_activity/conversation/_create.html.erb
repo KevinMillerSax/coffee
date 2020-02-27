@@ -1,0 +1,8 @@
+started the thread
+
+<% if activity.trackable %>
+  <i><%= link_to activity.trackable.content, activity.trackable %></i>
+  <%= time_ago_in_words(activity.trackable.created_at) %> ago
+<% else %>
+  <p>Thread has been deleted</p>
+<% end %>

@@ -27,11 +27,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @activities = PublicActivity::Activity.order("created_at desc").where(owner_id: @user.id)
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+      @user.create_activity :create, owner:@user
       redirect_to root_url
     else
       render 'new'

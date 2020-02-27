@@ -9,8 +9,10 @@
       <p>Replies: <%= conversation.replies.count %></p>
     </div>
     <div class="col-md-3">
-      <p>Last post: <%= time_ago_in_words(conversation.replies.first.created_at) %>
-      ago by <%= link_to conversation.replies.first.user.username, conversation.replies.first.user %> </p>
+      <% if conversation.replies.first %>
+        <p>Last post: <%= time_ago_in_words(conversation.replies.first.created_at) %>
+        ago by <%= link_to conversation.replies.first.user.username, conversation.replies.first.user %> </p>
+      <% end %>
     </div>
   </div>
 </div>
