@@ -2,43 +2,52 @@
 
 
 
-<%= render 'shared/errors' %>
+<div><%= render 'shared/errors' %></div>
 
 <div class="jumbotron center half-wide">
   <h3 class="bottom-space">Sign Up Here! </h3>
 
   <%= form_for(@user) do |f|%>
-  <div>
-    <%= f.label :username, "Username: " %>
-    <small> Length between 2 and 20 characters </small>
-    <%= f.text_field :username, class: "one-fourth" %>
-  </div>
-  <div>
-    <%= f.label :email, "Email Address: " %>
-    <%= f.email_field :email, class: "one-fourth" %>
-  </div>
-
-  <div>
-    <%= f.label :password, "Password: " %>
-    <small> Minimum of 6 characters </small>
-    <%= f.password_field :password, class: "one-fourth" %>
-
-    <%= f.label :password_confirmation, "Confirm Password: " %>
-    <%= f.password_field :password_confirmation, class: "one-fourth" %>
+  <div class="login-row bottom-space">
+    <div class="col-md-6">
+      <label><%= f.label :username, "Username: " %></label>
+      <div><%= f.text_field :username, class: "one-fourth" %></div>
+      <small> Length between 2 and 20 characters </small>
+    </div>
+    <div class="col-md-6">
+      <label><%= f.label :email, "Email Address: " %></label>
+      <div><%= f.email_field :email, class: "one-fourth" %></div>
+    </div>
   </div>
 
-  <%= f.label :equipment, "Equipment: " %>
-  <small>Tell us about your coffee stuff!</small>
-  <%= f.text_area :equipment, class: "one-fourth" %>
+  <div class="login-row bottom-space">
+    <div class="col-md-6">
+      <label><%= f.label :password, "Password: " %></label>
+      <div><%= f.password_field :password, class: "one-fourth" %></div>
+      <small> Minimum of 6 characters </small>
+    </div>
+    <div class="col-md-6">
+      <label><%= f.label :password_confirmation, "Confirm Password: " %></label>
+      <div><%= f.password_field :password_confirmation, class: "one-fourth" %></div>
+    </div>
+  </div>
 
-  <%= f.label :favorite_coffee, "Your Favorite Coffee: " %>
-  <%= f.text_area :favorite_coffee, class: "one-fourth" %>
+  <div class="login-row bottom-space">
+    <div class="col-md-6">
+      <label><%= f.label :equipment, "Equipment: " %></label>
+      <div><%= f.text_area :equipment, class: "one-fourth" %></div>
+      <small>Tell us about your coffee stuff!</small>
+    </div>
+    <div class="col-md-6">
+      <label><%= f.label :favorite_coffee, "Your Favorite Coffee: " %></label>
+      <div><%= f.text_area :favorite_coffee, class: "one-fourth" %></div>
+    </div>
+  </div>
 
-  <%= f.label :location, "Where you're from: " %>
-  <%= f.text_field :location, class: "one-fourth" %>
+  <label><%= f.label :location, "Where you're from: " %></label>
+  <div class="bottom-space"><%= f.text_field :location, class: "one-fourth" %></div>
 
-
-  <%= f.submit "Submit"%>
+  <button><%= f.submit "Submit", class: "btn" %></button>
 </div>
 <% end %>
 

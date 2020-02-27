@@ -5,11 +5,11 @@
 
   <%= form_for(:session, url: login_path) do |f| %>
     <div class="login-row">
-      <div>
+      <div class="col-md-6">
         <p><%= f.label :username, "Username: " %></p>
         <div class="bottom-space"><%= f.text_field :username %></div>
       </div>
-      <div>
+      <div class="col-md-6">
         <p><%= f.label :password, "Password: " %></p>
         <div class="bottom-space"><%= f.password_field :password %> </div>
       </div>
