@@ -1,8 +1,11 @@
 <% provide(:title, "The Forum") %>
 
-<h1>Welcome to the forum! </h1>
-<%= link_to "Post a new Thread", newthread_path %>
-</hr>
+<div class="forum-header bottom-space">
+  <h1>Welcome to the forum! </h1>
+  <% if current_user %>
+   <button class="btn btn-default"><%= link_to "Post a new Thread", newthread_path %></button>
+  <% end %>
+</div>
 
  <%= render @conversations %>
 

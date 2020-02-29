@@ -1,9 +1,9 @@
 <% provide(:title, "New Thread") %>
 
-<h1>Create a new thread </h1>
+<h1 class="bottom-space">Create a new thread </h1>
 
 <%= form_for(@conversation) do |f| %>
-  <%= f.label :content, "Title" %>
-  <%= f.text_field :content %>
+  <label><%= f.label :content, "Title: " %></label>
+  <div class="bottom-space"><%= f.text_field :content, class: "thread-title" %></div>
   <%= f.submit "Create Thread" %>
 <% end %>
