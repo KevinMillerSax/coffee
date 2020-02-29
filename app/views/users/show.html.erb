@@ -1,26 +1,29 @@
 <%= provide(:title, "My Profile")%>
+<div class="col-md-4">
+  <h2><%= @user.username %></h2>
+  <p>Location: <%= @user.location%></p>
+  <p>Join Date: <%= @user.created_at.strftime("%b %d, %Y")%>
+  <hr/>
+  <h4>About</h4>
+  <p>Favorite Coffee: <%= @user.favorite_coffee%></p>
+  <p>Your stuff: <%= @user.equipment%></p>
+  <hr/>
 
-<h2><%= @user.username %></h2>
-<h3><%= @user.location%></h3>
-<h4>About</h4>
-<p>Favorite Coffee: <%= @user.favorite_coffee%></p>
-<p>Your stuff: <%= @user.equipment%></p>
-<p>Threads <%= @user.username %> started: </p>
-
-<% @user.conversations.each do |c| %>
-  <%= link_to c.content, c %>
-<% end %>
-
-<% if current_user?(@user)%>
-  <p><%= link_to "Edit your profile", edit_user_path %></p>
-  <button> <%= link_to "Log Out", logout_path, method: "delete" %> </button>
-<% end %>
-
-<h4>Activity: </h4>
-<% @activities.each do |activity| %>
-  <div class="panel panel-default half-wide">
-    <div class="panel-body">
-      <%= render_activity activity %>
+  <% if current_user?(@user)%>
+    <div>
+    <button><%= link_to "Edit your profile", edit_user_path %></button>
+    <button> <%= link_to "Log Out", logout_path, method: "delete" %> </button>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
+<div class="col-md-8">
+  <h4>Latest Activity: </h4>
+  <% @activities.each do |activity| %>
+    <div class="panel panel-default half-wide">
+      <div class="panel-body">
+        <%= render_activity activity %>
+      </div>
+    </div>
+  <% end %>
+</div>
