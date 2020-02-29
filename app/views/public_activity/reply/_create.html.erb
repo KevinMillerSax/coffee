@@ -1,7 +1,7 @@
 replied to
 <% if activity.trackable %>
   <i><%= link_to activity.trackable.conversation.content, activity.trackable.conversation %></i>
-  <%= time_ago_in_words(activity.trackable.conversation.created_at) %> ago
+  <%= time_ago_in_words(activity.trackable.created_at) %> ago
 <% else %>
   <p> Thread has been removed </p>
 <% end %>

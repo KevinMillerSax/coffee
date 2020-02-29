@@ -18,5 +18,9 @@
 
 <h4>Activity: </h4>
 <% @activities.each do |activity| %>
-  <div><%= render_activity activity %></div>
+  <div class="panel panel-default half-wide">
+    <div class="panel-body">
+      <%= render_activity activity %>
+    </div>
+  </div>
 <% end %>

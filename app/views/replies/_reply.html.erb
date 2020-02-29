@@ -1,5 +1,15 @@
 <li id="reply-<%= reply.id %>">
-  <%= link_to reply.user.username, reply.user %>
-  <%= reply.content %>
-  Posted <%= time_ago_in_words(reply.created_at) %> ago
+<div class="panel panel-default">
+  <div class="panel-heading">Posted <%= time_ago_in_words(reply.created_at) %> ago</div>
+  <div class="panel-body">
+    <div class="col-md-2">
+      <p><%= link_to reply.user.username, reply.user %></p>
+      <p>Join Date: <%= reply.user.created_at.strftime("%b %d, %Y")%></p>
+      <p>Posts: <%= reply.user.replies.count%></p>
+    </div>
+    <div class="col-md-10">
+      <%= reply.content %>
+    </div>
+  </div>
+</div>
 </li>

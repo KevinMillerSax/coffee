@@ -1,19 +1,21 @@
 <% provide(:title, @conversation.content) %>
 
-<h1><%= @conversation.content %></h1>
-
-<%= form_for(@reply) do |f| %>
-  <%= f.label :content, "Reply"%>
-  <%= f.text_field :content %>
-  <%= f.hidden_field :conversation_id, value: params[:id] %>
-  <%= f.submit "Reply" %>
-<% end %>
+<h4><%= @conversation.content %></h4>
 
 <% if @conversation.replies.any? %>
-  <h3>Replies: <%= @conversation.replies.count %></h3>
   <ol>
     <%= render @replies %>
   </ol>
   <% will_paginate @replies %>
 <% end %>
+
+<div>
+
+  <%= form_for(@reply) do |f| %>
+    <label><%= f.label :content, "Reply"%></label>
+    <div><%= f.text_area :content, class: "reply-text" %></div>
+    <%= f.hidden_field :conversation_id, value: params[:id] %>
+    <%= f.submit "Reply" %>
+  <% end %>
+</div>
 

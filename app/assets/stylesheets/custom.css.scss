@@ -15,6 +15,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  padding: 0px;
+}
+
 h1 {
   margin: 0px;
 }
@@ -47,11 +51,13 @@ h3 {
   float: right;
 }
 
+.row {
+  display: flex;
+}
 //body styling
 body {
   margin: 3vh 5vw 2vh 5vw;
 }
-
 
 
 //styling the header
@@ -78,6 +84,15 @@ header {
   align-items: flex-start;
 }
 
+//reply style
+
+.reply-text {
+  width:100%;
+}
+
+.red {
+  color: red;
+}
 
 //error styles
 
