@@ -2,6 +2,7 @@ class User < ApplicationRecord
   include PublicActivity::Common
   has_many :conversations
   has_many :replies
+  has_one_attached :avatar
 
   attr_accessor :remember_token
 

@@ -5,29 +5,48 @@
  <%= render 'shared/errors' %>
   <%= form_for(@user) do |f|%>
 
-    <%= f.label :username, "Username: " %>
-    <small> Length between 2 and 20 characters </small>
-    <%= f.text_field :username, class: "one-fourth" %>
+    <div>
+      <%= f.label :avatar, "Upload Profile Picture" %>
+      <%= f.file_field :avatar %>
+    </div>
 
-    <%= f.label :email, "Email Address: " %>
-    <%= f.email_field :email, class: "one-fourth" %>
+    <div>
+      <%= f.label :username, "Username: " %>
+      <small> Length between 2 and 20 characters </small>
+      <%= f.text_field :username %>
+    </div>
 
-    <%= f.label :password, "Password: " %>
-    <small> Minimum of 6 characters </small>
-    <%= f.password_field :password, class: "one-fourth" %>
+    <div>
+      <%= f.label :email, "Email Address: " %>
+      <%= f.email_field :email %>
+    </div>
 
-    <%= f.label :password_confirmation, "Confirm Password: " %>
-    <%= f.password_field :password_confirmation, class: "one-fourth" %>
+    <div>
+      <%= f.label :password, "Password: " %>
+      <small> Minimum of 6 characters </small>
+      <%= f.password_field :password %>
+    </div>
 
-    <%= f.label :equipment, "Equipment: " %>
-    <small>Tell us about your coffee stuff!</small>
-    <%= f.text_area :equipment, class: "one-fourth" %>
+    <div>
+      <%= f.label :password_confirmation, "Confirm Password: " %>
+      <%= f.password_field :password_confirmation %>
+    </div>
 
-    <%= f.label :favorite_coffee, "Your Favorite Coffee: " %>
-    <%= f.text_area :favorite_coffee, class: "one-fourth" %>
+    <div>
+      <%= f.label :equipment, "Equipment: " %>
+      <small>Tell us about your coffee stuff!</small>
+      <%= f.text_area :equipment %>
+    </div>
 
-    <%= f.label :location, "Where you're from: " %>
-    <%= f.text_field :location, class: "one-fourth" %>
+    <div>
+      <%= f.label :favorite_coffee, "Your Favorite Coffee: " %>
+      <%= f.text_area :favorite_coffee %>
+    </div>
+
+    <div>
+      <%= f.label :location, "Where you're from: " %>
+      <%= f.text_field :location %>
+    </div>
 
     <%= f.submit "Update"%>
   <% end %>
