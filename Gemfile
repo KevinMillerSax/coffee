@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
-gem 'bootstrap-sass',          '3.3.7'
+gem 'bootstrap-sass',          '3.4.1'
 
 gem 'public_activity'
 
