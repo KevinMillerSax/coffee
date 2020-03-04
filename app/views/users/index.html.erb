@@ -3,7 +3,17 @@
 <h1>The index page!!!!</h1>
 
 <% @users.each do |u| %>
-  <h3><%= link_to u.username, u %></h3>
+  <div class="thumbnail">
+    <% if u.avatar.attached? %>
+     <%= image_tag u.avatar %>
+    <% else %>
+      <p>No Picture</p>
+    <% end %>
+    <h3><%= link_to u.username, u %></h3>
+    <p><%= u.location %></p>
+  </div>
+
+
   <% if current_user.admin? && !current_user?(u) %>
     <%= link_to "delete", u, method: 'delete',
                              data: {confirm: "Are you sure you want to delete this User?"} %>

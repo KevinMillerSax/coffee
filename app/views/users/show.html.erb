@@ -1,8 +1,8 @@
 <%= provide(:title, "My Profile")%>
 <div class="col-md-4">
   <% if (@user.avatar.attached?) %>
-    <%= image_tag @user.avatar %>
-  <% else %> 
+    <%= image_tag @user.avatar, class: "profile-pic" %>
+  <% else %>
     <p>no picture</p>
   <% end %>
   <h2><%= @user.username %></h2>
@@ -11,7 +11,7 @@
   <hr/>
   <h4>About</h4>
   <p>Favorite Coffee: <%= @user.favorite_coffee%></p>
-  <p>Your stuff: <%= @user.equipment%></p>
+  <p>Accessories: <%= @user.equipment%></p>
   <hr/>
 
   <% if current_user?(@user)%>
