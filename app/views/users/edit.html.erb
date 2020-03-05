@@ -1,54 +1,54 @@
 <% provide(:title, "Edit Profile")%>
-<h1>Edit your profile</h1>
+
 
 
  <%= render 'shared/errors' %>
+
+ <div class="jumbotron center half-wide">
+  <h3 class="bottom-space">Edit your profile</h3>
   <%= form_for(@user) do |f|%>
 
-    <div>
-      <%= f.label :avatar, "Upload Profile Picture" %>
-      <%= f.file_field :avatar %>
+    <div class="login-row bottom-space">
+      <div class="col-md-6">
+        <label><%= f.label :avatar, "Upload Profile Picture" %></label>
+        <div><%= f.file_field :avatar %></div>
+      </div>
+      <div class="col-md-6">
+        <label><%= f.label :email, "Email Address: " %></label>
+        <div><%= f.email_field :email, class: "input-length" %></div>
+      </div>
     </div>
 
-    <div>
-      <%= f.label :username, "Username: " %>
-      <small> Length between 2 and 20 characters </small>
-      <%= f.text_field :username %>
+    <div class="login-row bottom-space">
+      <div class="col-md-6">
+        <label><%= f.label :equipment, "Equipment: " %></label>
+        <div><%= f.text_area :equipment, class: "input-box" %></div>
+      </div>
+      <div class="col-md-6">
+        <label><%= f.label :favorite_coffee, "Your Favorite Coffee: " %></label>
+        <div><%= f.text_area :favorite_coffee, class: "input-box" %></div>
+      </div>
     </div>
 
-    <div>
-      <%= f.label :email, "Email Address: " %>
-      <%= f.email_field :email %>
+    <div class="login-row bottom-space">
+      <div class="col-md-6">
+        <label><%= f.label :password, "Password: " %></label>
+        <div><%= f.password_field :password, class: "input-length"  %></div>
+        <small> Minimum of 6 characters </small>
+      </div>
+      <div class="col-md-6">
+        <label><%= f.label :password_confirmation, "Confirm Password: " %></label>
+        <div><%= f.password_field :password_confirmation, class: "input-length"  %></div>
+      </div>
     </div>
 
-    <div>
-      <%= f.label :password, "Password: " %>
-      <small> Minimum of 6 characters </small>
-      <%= f.password_field :password %>
+    <div class="bottom-space">
+        <label><%= f.label :location, "Where you're from: " %></label>
+        <div><%= f.text_field :location, class: "input-length"  %></div>
     </div>
 
-    <div>
-      <%= f.label :password_confirmation, "Confirm Password: " %>
-      <%= f.password_field :password_confirmation %>
-    </div>
-
-    <div>
-      <%= f.label :equipment, "Equipment: " %>
-      <small>Tell us about your coffee stuff!</small>
-      <%= f.text_area :equipment %>
-    </div>
-
-    <div>
-      <%= f.label :favorite_coffee, "Your Favorite Coffee: " %>
-      <%= f.text_area :favorite_coffee %>
-    </div>
-
-    <div>
-      <%= f.label :location, "Where you're from: " %>
-      <%= f.text_field :location %>
-    </div>
-
-    <%= f.submit "Update"%>
+    <div><%= f.submit "Update"%></div>
+  </div>
   <% end %>
 
 

@@ -11,24 +11,24 @@
   <div class="login-row bottom-space">
     <div class="col-md-6">
       <label><%= f.label :username, "Username: " %></label>
-      <div><%= f.text_field :username %></div>
+      <div><%= f.text_field :username, class: "input-length"  %></div>
       <small> Length between 2 and 20 characters </small>
     </div>
     <div class="col-md-6">
       <label><%= f.label :email, "Email Address: " %></label>
-      <div><%= f.email_field :email %></div>
+      <div><%= f.email_field :email, class: "input-length"  %></div>
     </div>
   </div>
 
   <div class="login-row bottom-space">
     <div class="col-md-6">
       <label><%= f.label :password, "Password: " %></label>
-      <div><%= f.password_field :password %></div>
+      <div><%= f.password_field :password, class: "input-length"  %></div>
       <small> Minimum of 6 characters </small>
     </div>
     <div class="col-md-6">
       <label><%= f.label :password_confirmation, "Confirm Password: " %></label>
-      <div><%= f.password_field :password_confirmation %></div>
+      <div><%= f.password_field :password_confirmation, class: "input-length"  %></div>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
     </div>
     <div class="col-md-6">
       <label><%= f.label :location, "Where you're from: " %></label>
-      <div class="bottom-space"><%= f.text_field :location %></div>
+      <div class="bottom-space"><%= f.text_field :location, class: "input-length"  %></div>
     </div>
   </div>
 
