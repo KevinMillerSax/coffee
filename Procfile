@@ -1,0 +1,1 @@
+release: sh script/heroku_release.sh
