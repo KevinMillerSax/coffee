@@ -46,7 +46,10 @@ h3 {
 }
 
 //general styling
-
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .input-length {
   width: 16vw;
 }
@@ -117,6 +120,15 @@ header {
 
 .profile-pic {
   width: 22vw;
+}
+
+//user index
+.user-index-pic {
+  width: 250px;
+  height: 250px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 //reply style

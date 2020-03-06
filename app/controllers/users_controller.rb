@@ -36,6 +36,7 @@ class UsersController < ApplicationController
     avatar_exist(@user)
     if @user.save
       @user.create_activity :create, owner:@user
+      log_in @user
       redirect_to root_url
     else
       render 'new'
