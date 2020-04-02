@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-
   root                   'static_pages#home'
   get 'about'         => 'static_pages#about'
   get 'resources'     => 'static_pages#resources'
@@ -11,5 +9,7 @@ Rails.application.routes.draw do
   delete 'logout'     => 'sessions#destroy'
   resources :conversations
   get 'newthread'     => 'conversations#new'
-  resources :replies, only: [:create, :destroy]
+  resources :replies, only: [:create, :destroy] do
+    resources  :likes
+  end
 end

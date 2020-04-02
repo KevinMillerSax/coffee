@@ -9,7 +9,16 @@
     </div>
     <div class="col-md-10">
       <%= reply.content %>
+      <p><%= reply.likes.count %> <%= (reply.likes.count) == 1 ? 'Like' : 'Likes'%></p>
     </div>
+    <% if current_user %>
+      <% pre_like = reply.likes.find { |like| like.user_id == current_user.id} %>
+      <% if pre_like  %>
+        <%= button_to 'Unlike', reply_like_path(reply, pre_like), method: :delete %>
+      <% else %>
+        <%= button_to 'Like', reply_likes_path(reply), method: :post %>
+      <% end %>
+    <% end %>
   </div>
 </div>
 </li>

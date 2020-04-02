@@ -1,7 +1,7 @@
 class Reply < ApplicationRecord
   include PublicActivity::Common
   #tracked owner: ->(controller, model) { controller && controller.current_user }
-
+  has_many :likes, dependent: :destroy
   belongs_to :user
   belongs_to :conversation
 
