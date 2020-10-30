@@ -1,24 +1,6 @@
-# README
+## The Nervosa Coffee Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Nervosa is a coffee themed forum built in Ruby on Rails.  User has sign up, create threads, reply to others, and maintain a profile.  Check it out [here](https://nervosa-coffee.herokuapp.com/)
 
-Things you may want to cover:
+![coffee app](https://i.imgur.com/7W469cB.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
